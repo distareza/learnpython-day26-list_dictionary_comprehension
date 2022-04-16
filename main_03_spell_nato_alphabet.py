@@ -34,7 +34,8 @@ nato_dict = { row.letter : row.code for (idx, row) in nato_dataframe.iterrows() 
 print(nato_dict)
 
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
-name = input("what is your name ? ")
-for c in name:
+word = input("Enter a word :")
+print([nato_dict[letter] for letter in word.upper()])
+for c in word:
     word_spelling = nato_dict[c.upper()]
     print(f" {c} for {word_spelling}")
